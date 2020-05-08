@@ -21,7 +21,7 @@ hexo.extend.filter.register('theme_inject', injects => {
   injects.head.raw('nightmode-head', utils.getFileContent('head.swig'), {}, {cache: true});
   if (!config.alpha) {
     injects.style.push(utils.getFilePath('css/button.styl'));
-    injects.sidebar.raw('nightmode-sidebar', utils.getFileContent('sidebar.swig'), {}, {cache: true});
+    injects.header.raw('nightmode-header', utils.getFileContent('header.swig'), {}, {cache: true});
   }
   injects.bodyEnd.raw('nightmode-bodyEnd', utils.getFileContent('bodyEnd.swig'), {}, {cache: true});
 });
